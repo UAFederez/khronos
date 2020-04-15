@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--Stylesheets here (bootstrap first)-->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>FAQs &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
+                <a class="navbar-brand" href="#">
+                    <img src="img/ogl-logo.png" height="40" class="align-bottom">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav class="collapse navbar-collapse" id="main-nav"> 
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About OpenGL</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="docDropdown" role="button" data-toggle="dropdown">Resources</a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pipeline.html">Rendering Pipeline</a>
+                                <a class="dropdown-item" href="glut.html">OpenGL Utility Libraries</a>
+                                <a class="dropdown-item" href="perfbench.html">Performance Benchmarks</a>
+                                <a class="dropdown-item" href="faq.html">FAQs</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                        <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </header>
+
+
+        <div id="content" class="container-fluid text-dark mb-3 no-jumbotron px-0">
+            <div class="container-fluid title-bg">
+                <div class="container">
+                    <h1>Frequently Asked Questions</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="accordion" id="faqAccordion">
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                        What is OpenGL?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse1" class="collapse" aria-labelledby="collapse1" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    OpenGL is the name for the specification that describes the behavior of a rasterization-based rendering system. It defines the API through which a client application can control this system. The OpenGL rendering system is carefully specified to make hardware implementations allowable.
+Hardware vendors, the people who make GPUs, are responsible for writing implementations of the OpenGL rendering system. Their implementations, commonly called "drivers", translate OpenGL API commands into GPU commands. If a particular piece of hardware is unable to implement all of the OpenGL specification via hardware, the hardware vendor must still provide this functionality, typically via a software-based implementation of the features missing from hardware.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading2">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        What is NOT OpenGL?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse2" class="collapse" aria-labelledby="collapse2" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    The OpenGL API only deals with rendering graphics. OpenGL does not provide functions for animations, timing, file IO, image file format processing, GUI, and so forth. OpenGL is concerned only about rendering.
+GLUT is not OpenGL. It is not a part of OpenGL; it is simply a library that is used by some users to create an OpenGL window.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading3">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        Who maintains the OpenGL specification?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse3" class="collapse" aria-labelledby="collapse3" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    The OpenGL specification is maintained by the Khronos Group committee called the OpenGL Architectural Review Board (ARB). Originally, the ARB was an organization sponsored by SGI, but it was adopted by the Khronos Group.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading4">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Is OpenGL Open Source?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse4" class="collapse" aria-labelledby="collapse4" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    No, OpenGL doesn't have any source code. GL is a specification which can be found on this website. It describes the interface the programmer uses and expected behavior. OpenGL is an open specification. Anyone can download the spec for free. This is as opposed to ISO standards and specifications, which cost money to access.
+
+Mesa3D is an open source software implementation of the OpenGL specification. The latest versions implement OpenGL 4.3, OpenGL ES 2.0, GLSL 3.30 (and several extensions) and EGL 1.4.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading5">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        Where can I download OpenGL?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse5" class="collapse" aria-labelledby="collapse5" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    Just like the Open Source section explains, OpenGL is not a software product. It is a specification.
+
+On Mac OS X, Apple's OpenGL implementation is included in the OS.
+
+On Windows, hardware vendors (such as NVIDIA or AMD/ATI) use the spec to write their own implementation, so OpenGL is included in the drivers that they supply. For laptop owners, however, you'll need to visit the manufacturer of your laptop and download the drivers from them.
+
+Updating your graphics drivers is usually enough to get the latest OpenGL implementation for your graphics hardware. This is sufficient for those who want to use applications that require OpenGL.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading6">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                        What platforms have GL?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse6" class="collapse" aria-labelledby="collapse6" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    <ul><li><strong>Windows:</strong> 95 and above</li>
+<li><strong>Mac OSX:</strong> all versions</li>
+<li><strong>Linux:</strong> OpenGL is provided by open source drivers and MESA library, or by proprietary drivers.</li>
+<li><strong>FreeBSD:</strong>    OpenGL is provided by open source drivers and MESA library or proprietary Nvidia drivers.</li></ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading7">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                        What is an OpenGL context and why do you need a window to do GL rendering?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse7" class="collapse" aria-labelledby="collapse7" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    The GL context comprises resources (driver resources in RAM, texture IDs assigned, VBO IDs assigned, enabled states (<samp>GL_BLEND</samp>, <samp>GL_DEPTH_TEST</samp>) and many other things). Think of the GL context as some memory allocated by the driver to store some information about the state of your GL program.
+
+You must create a GL context in order for your GL function calls to make sense
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <footer class="footer text-dark p-3">
+            <div class="container">
+                <div class="row justify-content-md-center py-2">
+                    <div class="col">
+                        <p class="my-0" >Contact Info: </p>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                    </div>
+
+                    <div class="col mb-3">
+                        <p class="my-0 mb-3">Sitemap</p>
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href="#" class="text-muted">Home</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">About</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Gallery</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Publications</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">News</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Events</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Contact Us</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Apply Now</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm">
+                        <p>Developer:</p>
+                        <p class="text-muted">Uriel Federez</p>
+                    </div> 
+
+
+                    <div class="col ">
+                        <p>Other Contact Info:</p>
+                        <p class="text-muted">
+                        9450 SW Gemini Drive #45043
+                        Beaverton, OR 97008-6018 USA<br/>
+                        Office: +1 (415) 869-8627<br/>
+                        Fax: +1 (707) 202-0030
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>

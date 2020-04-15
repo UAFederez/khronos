@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--Stylesheets here (bootstrap first)-->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>Performance Benchmarks &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
+                <a class="navbar-brand" href="#">
+                    <img src="img/ogl-logo.png" height="40" class="align-bottom">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav class="collapse navbar-collapse" id="main-nav"> 
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About OpenGL</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="docDropdown" role="button" data-toggle="dropdown">Resources</a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pipeline.html">Rendering Pipeline</a>
+                                <a class="dropdown-item" href="glut.html">OpenGL Utility Libraries</a>
+                                <a class="dropdown-item" href="perfbench.html">Performance Benchmarks</a>
+                                <a class="dropdown-item" href="faq.html">FAQs</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                        <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </header>
+
+
+        <div id="content" class="container text-dark mb-3 no-jumbotron px-0">
+            <div class="container-fluid title-bg">
+                <div class="container">
+                    <h1>Performance Benchmarks</h1>
+                </div>
+                
+                <div class="container"> 
+                    <div class="row my-4">
+                        <div class="col-md">
+                            <h3 class="lead"><a href="https://www.basemark.com/benchmarks/basemark-gpu/">Basemark GPU 1.1.0 Benchmark Software</a></h3>
+                            <p style="line-height: 2.0em">
+                            <span class="lead">This was tested on the new version of the new test bench based on an Intel 
+                                Core i7-8700K.</span><br/>
+                            This time, the benchmark managed to run on on Radeon GPUs but 
+                            it had some failures on NVIDIA GTX 1080 (the benchmark started up correctly 
+                            but didn’t finish the tests for an unknown reason, and this for all 3D APIs).
+
+                            <strong>The succeeding tables show the system specifications used for
+                            this benchmark as well as results using different graphics APIs</strong>
+                            </p>
+                        </div>
+                        <div class="col-md">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col" colspan="1">Test System</th>
+                                        <th scope="col" colspan="1">Model</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>CPU</td>        <td>Intel Core i7-8700K @ 3.7GHz</td></tr>
+                                    <tr><td>Motherboard</td><td>GIGABYTE Z390 Gaming X</td></tr>
+                                    <tr><td>Memory</td>     <td>16GB DDR4 Corsair Vengeance LED @ 3000MHz</td></tr>
+                                    <tr><td>PSU</td>        <td>Corsair AX860i</td></tr>
+                                    <tr><td>Storage</td>    <td>Samsung 840 Pro 256GB SSD</td></tr>
+                                    <tr><td>OS</td>         <td>Windows 10 v1809 64-bit</td></tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3><strong>Benchmark Results &mdash; OpenGL</strong></h3>
+                    <div class="row my-4">
+
+                        <div class="col">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col">Graphics Card</th>
+                                        <th scope="col">Driver Version</th>
+                                        <th scope="col">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ASUS RTX 2080 Strix</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>9260 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI RTX 2070 Ventus</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>7224 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVGA GTX 1070 FTW</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>5278 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX Vega 56 AIR BOOST</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>2344 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX 470 Gaming 8GB</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>2378 points</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3><strong>Benchmark Results &mdash; Direct3D 12</strong></h3>
+                    <div class="row my-4">
+                        <div class="col">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col">Graphics Card</th>
+                                        <th scope="col">Driver Version</th>
+                                        <th scope="col">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ASUS RTX 2080 Strix</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>9368 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI RTX 2070 Ventus</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>7120 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVGA GTX 1070 FTW</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>5054 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX Vega 56 AIR BOOST</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>4999 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX 470 Gaming 8GB</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>3330 points</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3><strong>Benchmark Results &mdash; Vulkan</strong></h3>
+                    <div class="row my-4">
+                        <div class="col">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col">Graphics Card</th>
+                                        <th scope="col">Driver Version</th>
+                                        <th scope="col">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ASUS RTX 2080 Strix</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>9630 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI RTX 2070 Ventus</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>7430 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVGA GTX 1070 FTW</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>&mdash; FAILED &mdash;</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX Vega 56 AIR BOOST</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>3356 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX 470 Gaming 8GB</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>3330 points</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <footer class="footer text-dark p-3">
+            <div class="container">
+                <div class="row justify-content-md-center py-2">
+                    <div class="col">
+                        <p class="my-0" >Contact Info: </p>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                    </div>
+
+                    <div class="col mb-3">
+                        <p class="my-0 mb-3">Sitemap</p>
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href="#" class="text-muted">Home</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">About</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Gallery</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Publications</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">News</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Events</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Contact Us</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Apply Now</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm">
+                        <p>Developer:</p>
+                        <p class="text-muted">Uriel Federez</p>
+                    </div> 
+
+
+                    <div class="col ">
+                        <p>Other Contact Info:</p>
+                        <p class="text-muted">
+                        9450 SW Gemini Drive #45043
+                        Beaverton, OR 97008-6018 USA<br/>
+                        Office: +1 (415) 869-8627<br/>
+                        Fax: +1 (707) 202-0030
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>

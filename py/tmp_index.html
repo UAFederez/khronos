@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{ header_tmp | indent(width = 8, first = False) }}
+        <title>Home &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        {{ nav_tmp | indent(width = 8, first = False) }}
+
+        <div class="jumbotron jumbo-bg text-light d-flex align-items-center justify-content-center mb-0 rounded-0">
+            <div class="container-sm text-center">
+                <h2><b>Industry Standard for High-Performance Computer Graphics</b></h2>
+                <div class="dropdown-divider"></div>
+                <p class="lead"><i>OpenGL is the premier environment for developing portable, interactive 2D and 3D graphics applications</i></p>
+                <a href="about.html"><button type="button" class="btn btn-light">Learn More</button></a>
+            </div>
+        </div>
+
+        <div id="content" class="container-fluid mt-0 text-dark mb-3">
+        </div>
+        
+        <div class="container my-5">
+            <h2>Upcoming Events</h2>
+            <div class="row my-4">
+                <div class="col-sm-6">
+                    <h4><a href="#">OSDC East 2020</a></h4>
+                    <p>ODSC East 2020 is gearing up to be their largest and most exciting conference yet. 
+                    Not only will they have 100+ workshops and hands-on training sessions, 200+ speakers, 
+                    and 400 hours of content, they’ll also have numerous opportunities for you to learn 
+                    from and network with your peers and our expert speakers.</p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/osdc.png" width="100%">
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-sm-6">
+                    <h4><a href="#">IWOCL / SYCLcon 2020</a></h4>
+                    <p>
+                        Join us at the 8th International Workshop on OpenCL, including SYCLcon 
+                        2020, for three days of talks, workshops and community networking aimed 
+                        at furthering the collaboration and knowledge sharing amongst the 
+                        international community of high-performance computing specialist working 
+                        with OpenCL, SYCL, SPIR and Vulkan Compute.
+                    </p></div>
+                <div class="col-sm-6">
+                    <img src="img/iwocl.jpg" width="100%">
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-sm-6">
+                    <h4><a href="#">Embedded Vision Summit 2020</a></h4>
+                    <p>
+                        Don't miss this year’s OpenVX Workshop at Embedded Vision Summit. Khronos 
+                        will present a day-long hands-on workshop all about OpenVX cross-platform 
+                        neural network acceleration API for embedded vision applications. We’ve 
+                        developed a new curriculum so even if you attended in past years, this is 
+                        a do-not-miss, jam-packed tutorial with new information on computer vision 
+                        algorithms for feature tracking and neural networks mapped to the graph API.
+                    </p></div>
+                <div class="col-sm-6">
+                    <img src="img/evs.jpg" width="100%">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container" id="main-content">
+            <h2>Featured News</h2>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/nvidia_designworks.png" class="mb-3 card-img-top" alt="...">
+                            <h5 class="card-title"><a href="#">NVIDIA provides OpenGL-accelerated Remote Desktop for GeForce</a></h5>
+                            <p class="card-text text-muted">April 7, 2020</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/geforce.png" class="mb-3 card-img-top" alt="...">
+                            <h5 class="card-title"><a href="#">NVIDIA provides OpenGL-accelerated Remote Desktop for GeForce</a></h5>
+                            <p class="card-text text-muted">January 24, 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-md-8 my-2">
+                    <h2>More Recent News</h2>
+
+                    <div class="card bg-light mb-3">
+                        <h5 class="card-header"><a href="#">Khronos Group Releases Vulkan 1.2</a></h5>
+                        <p class="card-body bg-light">
+                            The Khronos Group announces the release of the Vulkan 1.2 
+                            specification for GPU acceleration. This release integrates 23 proven 
+                            extensions into the core Vulkan API, bringing significant 
+                            developer-requested access to new hardware functionality, 
+                            improved application performance, and enhanced API usability 
+                        </p>
+                    </div>
+
+                    <div class="card bg-light mb-3">
+                        <h5 class="card-header"><a href="#">NVIDIA announces Nsight Systems 2019.6 with OpenGL improvements</a></h5>
+                        <p class="card-body bg-light">
+                            NVIDIA Nsight Systems 2019.6 is now available for download. 
+                            This release expands graphics trace on Windows by adding support 
+                            for Direct3D 11, WDDM CPU+GPU queues, and OpenGL. On Linux, new 
+                            features include support for CUDA 10.2, simultaneous CLI sessions, 
+                            DWARF unwind and capture by hotkey.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 my-2" style="height: 500px; overflow: scroll;">
+                    <a class="twitter-timeline" href="https://twitter.com/opengl?ref_src=twsrc%5Etfw">Tweets by opengl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+        {{ footer_tmp | indent(width = 8, first = False) }}
+    </body>
+</html>

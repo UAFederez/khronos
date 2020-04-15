@@ -1,0 +1,48 @@
+    https://coolors.co/f55d3e-878e88-f7cb15-ffffff-76bed0
+py/
+    templates/
+        [x] nav_and_footer_template.html
+        [x] header_template.html
+        [x] postbody_scripts.html
+    [x] tmp_home.html
+    [x] tmp_about.html
+    [x] tmp_faq.html
+    [x] tmp_pipeline.html
+    [x] tmp_perfbench.html
+    [ ] tmp_glut.html
+    [ ] tmp_news.html
+    [ ] tmp_res.html
+    [ ] tmp_documentation.html
+    [ ] tmp_contact.html
+
+    [x] Links, Lists, HTML layouts, etc.
+    [x] Image Map
+    [x] Tables
+    [ ] Forms
+    [x] Animated Images
+    [x] Sliding Window / Images
+    [x] Drop down (navigation bar) menu
+    [ ] Pop up image (lighbox)
+    [ ] CSS3 features
+        [ ] CSS float
+        [ ] CSS Opacity
+        [x] CSS Navigation Bar
+        [x] CSS Dropdowns
+        [ ] CSS Image Gallery
+        [x] CSS Rounded Corners
+        [ ] CSS Border Images
+        [x] CSS Colors (rgba)
+        [ ] CSS Gradients
+        [x] CSS Shadow effects
+    
+OpenGL Website Pages:
+Home
+Documentation
+ - FAQ
+ - OpenGL SDK
+ - Performance Benchmarks
+ - GLUT and OpenGL Utility Libraries
+News
+Resources
+About OpenGL
+Contact

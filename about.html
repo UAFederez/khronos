@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--Stylesheets here (bootstrap first)-->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>About &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
+                <a class="navbar-brand" href="#">
+                    <img src="img/ogl-logo.png" height="40" class="align-bottom">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav class="collapse navbar-collapse" id="main-nav"> 
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About OpenGL</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="docDropdown" role="button" data-toggle="dropdown">Resources</a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pipeline.html">Rendering Pipeline</a>
+                                <a class="dropdown-item" href="glut.html">OpenGL Utility Libraries</a>
+                                <a class="dropdown-item" href="perfbench.html">Performance Benchmarks</a>
+                                <a class="dropdown-item" href="faq.html">FAQs</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                        <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </header>
+
+
+        <div id="content" class="container-fluid text-dark mb-3 no-jumbotron px-0">
+            <div class="container-fluid title-bg">
+                <div class="container">
+                    <h1>About OpenGL</h1>
+                </div>
+            </div>
+            <div class="container about-bg">
+                <div class="container">
+                    <div class="row text-center py-5">
+                        <div class="col-md">
+                            <div class="card-md bg-light shadow">
+                                <div class="card-body">
+                                    <h3 class="card-title">Most Widely Adopted Graphics Standard</h3>
+                                    <small>
+                                        Since its introduction in 1992, OpenGL has become the industry's 
+                                        most widely used and supported 2D and 3D graphics application programming 
+                                        interface (API).
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="card-md bg-light shadow">
+                                <div class="card-body">
+                                    <h3 class="card-title">The Foundation for Advanced APIs</h3>
+                                    <small>
+                                        Leading software developers use OpenGL, with its robust rendering libraries, 
+                                        as the 2D/3D graphics foundation for higher-level APIs. Developers leverage 
+                                        the capabilities of OpenGL to deliver highly differentiated, yet widely 
+                                        supported vertical market solutions
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="card-md bg-light shadow">
+                                <div class="card-body">
+                                    <h3 class="card-title">Continued Innovation</h3>
+                                    <small>
+                                        The OpenGL standard is constantly evolving. Formal revisions occur at 
+                                        periodic intervals, and extensions allowing application developers to 
+                                        access the latest hardware advances through OpenGL are continuously 
+                                        being developed.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2 class="mb-3">OpenGL In the Industry</h2>
+            <div id="carouselControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100"  src="img/rdr2_gameplay.jpg" alt="Used in games">
+                        <div class="carousel-caption d-none d-md-block text-right">
+                            <h2><strong>Real-time Graphics for Games</strong></h2>
+                            <p >OpenGL is used for high-quality and realistic 3D renderings.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"  src="img/medvis.png" alt="Medical Visualization">
+                        <div class="carousel-caption d-none d-md-block text-left">
+                            <h2><strong>Efficient Scientific Visualization</strong></h2>
+                            <p >Many scientific and medical tools and software globally powered by OpenGL.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"  src="img/architecture.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block" style="text-shadow: 0px 1px 4px #222;">
+                            <h2><strong>Building Tools and Structures</strong></h2>
+                            <p >Leading the forefront in efficient structural and architectural visualization.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <h2>High Quality and Performance</h2>
+            <div class="row mb-5 mt-3">
+                <div class="col-md">
+                    <p style="line-height: 2.0em">
+                    <span class="lead">
+                    OpenGL fosters innovation and speeds application development by incorporating a 
+                    broad set of rendering, texture mapping, special effects, and other powerful 
+                    visualization functions.
+                    </span>
+                    <br/>
+                    Any visual computing application requiring maximum performance &mdash; from <strong>3D animation </strong>to 
+                    <strong>CAD to visual simulation</strong> &mdash; can exploit high-quality, high-performance OpenGL capabilities. 
+                    These capabilities allow developers in diverse markets such as broadcasting, CAD/CAM/CAE, 
+                    entertainment, medical imaging, and virtual reality to produce and display incredibly 
+                    compelling 2D and 3D graphics.
+                    </p>
+                </div>
+                <div class="col-md">
+                    <img src="img/cad-demo.jpg" width="100%">
+                </div>
+            </div>
+
+            <div class="row mb-5 mt-3">
+                <div class="col-md">
+                    <img src="img/ogl_graphics.jpg" width="100%" class="shadow">
+                </div>
+                <div class="col-md">
+                    <h2>Simplifies Software Development</h2>
+                    <p style="line-height: 2.0em">
+                    <span class="lead">OpenGL routines simplify the development of graphics software.</span><br/>From rendering a
+                    <strong>simple geometric point</strong>, line, or filled polygon to the creation of the most complex 
+                    <strong>lighted and texture-mapped NURBS curved surface.</strong>OpenGL gives software developers 
+                    access to geometric and image primitives, display lists, modeling transformations, 
+                    lighting and texturing, anti-aliasing, blending, and many other features.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-5 mt-3">
+                <div class="col-md">
+                    <h2>Flexible and Extensible</h2>
+                    <p style="line-height: 2.0em">
+                    <span class="lead">Platform vendors have 
+                        the freedom to tailor a particular OpenGL implementation to meet unique system cost and performance objectives.</span><br/>
+                        Individual calls can be executed on dedicated hardware, run as software routines on the standard system CPU, 
+                        or implemented as a combination of both dedicated hardware and software routines. This implementation flexibility means 
+                        that OpenGL hardware acceleration can range from <strong>simple rendering to full geometry </strong> and is widely available on everything 
+                        from low-cost PCs to <strong>high-end workstations and supercomputers.</strong>
+                    </p>
+                </div>
+                <div class="col-md">
+                    <img src="img/tesselation.jpg" width="100%" class="shadow-lg">
+                </div>
+            </div>
+        </div>
+        <footer class="footer text-dark p-3">
+            <div class="container">
+                <div class="row justify-content-md-center py-2">
+                    <div class="col">
+                        <p class="my-0" >Contact Info: </p>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                    </div>
+
+                    <div class="col mb-3">
+                        <p class="my-0 mb-3">Sitemap</p>
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href="#" class="text-muted">Home</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">About</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Gallery</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Publications</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">News</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Events</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Contact Us</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Apply Now</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm">
+                        <p>Developer:</p>
+                        <p class="text-muted">Uriel Federez</p>
+                    </div> 
+
+
+                    <div class="col ">
+                        <p>Other Contact Info:</p>
+                        <p class="text-muted">
+                        9450 SW Gemini Drive #45043
+                        Beaverton, OR 97008-6018 USA<br/>
+                        Office: +1 (415) 869-8627<br/>
+                        Fax: +1 (707) 202-0030
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>

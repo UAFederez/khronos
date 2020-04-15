@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{ header_tmp | indent(width = 8, first = False) }}
+        <title>Performance Benchmarks &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        {{ nav_tmp | indent(width = 8, first = False) }}
+
+        <div id="content" class="container text-dark mb-3 no-jumbotron px-0">
+            <div class="container-fluid title-bg">
+                <div class="container">
+                    <h1>Performance Benchmarks</h1>
+                </div>
+                
+                <div class="container"> 
+                    <div class="row my-4">
+                        <div class="col-md">
+                            <h3 class="lead"><a href="https://www.basemark.com/benchmarks/basemark-gpu/">Basemark GPU 1.1.0 Benchmark Software</a></h3>
+                            <p style="line-height: 2.0em">
+                            <span class="lead">This was tested on the new version of the new test bench based on an Intel 
+                                Core i7-8700K.</span><br/>
+                            This time, the benchmark managed to run on on Radeon GPUs but 
+                            it had some failures on NVIDIA GTX 1080 (the benchmark started up correctly 
+                            but didn’t finish the tests for an unknown reason, and this for all 3D APIs).
+
+                            <strong>The succeeding tables show the system specifications used for
+                            this benchmark as well as results using different graphics APIs</strong>
+                            </p>
+                        </div>
+                        <div class="col-md">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col" colspan="1">Test System</th>
+                                        <th scope="col" colspan="1">Model</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>CPU</td>        <td>Intel Core i7-8700K @ 3.7GHz</td></tr>
+                                    <tr><td>Motherboard</td><td>GIGABYTE Z390 Gaming X</td></tr>
+                                    <tr><td>Memory</td>     <td>16GB DDR4 Corsair Vengeance LED @ 3000MHz</td></tr>
+                                    <tr><td>PSU</td>        <td>Corsair AX860i</td></tr>
+                                    <tr><td>Storage</td>    <td>Samsung 840 Pro 256GB SSD</td></tr>
+                                    <tr><td>OS</td>         <td>Windows 10 v1809 64-bit</td></tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3><strong>Benchmark Results &mdash; OpenGL</strong></h3>
+                    <div class="row my-4">
+
+                        <div class="col">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col">Graphics Card</th>
+                                        <th scope="col">Driver Version</th>
+                                        <th scope="col">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ASUS RTX 2080 Strix</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>9260 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI RTX 2070 Ventus</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>7224 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVGA GTX 1070 FTW</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>5278 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX Vega 56 AIR BOOST</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>2344 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX 470 Gaming 8GB</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>2378 points</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3><strong>Benchmark Results &mdash; Direct3D 12</strong></h3>
+                    <div class="row my-4">
+                        <div class="col">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col">Graphics Card</th>
+                                        <th scope="col">Driver Version</th>
+                                        <th scope="col">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ASUS RTX 2080 Strix</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>9368 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI RTX 2070 Ventus</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>7120 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVGA GTX 1070 FTW</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>5054 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX Vega 56 AIR BOOST</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>4999 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX 470 Gaming 8GB</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>3330 points</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3><strong>Benchmark Results &mdash; Vulkan</strong></h3>
+                    <div class="row my-4">
+                        <div class="col">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-dark text-light">
+                                        <th scope="col">Graphics Card</th>
+                                        <th scope="col">Driver Version</th>
+                                        <th scope="col">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ASUS RTX 2080 Strix</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>9630 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI RTX 2070 Ventus</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>7430 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVGA GTX 1070 FTW</td>
+                                        <td><i>GeForce 417.01</i></td>
+                                        <td><strong>&mdash; FAILED &mdash;</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX Vega 56 AIR BOOST</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>3356 points</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MSI Radeon RX 470 Gaming 8GB</td>
+                                        <td><i>Adrenalin 18.11.2</i></td>
+                                        <td><strong>3330 points</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        {{ footer_tmp | indent(width = 8, first = False) }}
+    </body>
+</html>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--Stylesheets here (bootstrap first)-->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>The Rendering Pipeline &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
+                <a class="navbar-brand" href="#">
+                    <img src="img/ogl-logo.png" height="40" class="align-bottom">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav class="collapse navbar-collapse" id="main-nav"> 
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About OpenGL</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="docDropdown" role="button" data-toggle="dropdown">Resources</a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pipeline.html">Rendering Pipeline</a>
+                                <a class="dropdown-item" href="glut.html">OpenGL Utility Libraries</a>
+                                <a class="dropdown-item" href="perfbench.html">Performance Benchmarks</a>
+                                <a class="dropdown-item" href="faq.html">FAQs</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                        <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </header>
+
+
+        <div id="content" class="container-fluid text-dark mb-3 no-jumbotron px-0">
+            <div class="container-fluid title-bg">
+                <div class="container">
+                    <h1>The OpenGL Rendering Pipeline</h1>
+                </div>
+            </div>
+
+            <div class="container">
+                <p class="lead">Click on a section of the pipeline to learn more.</p>
+                <div class="row">
+                    <div class="col-md col-lg-4">
+                        <center>
+                            <img id="pipeline" src="img/pipeline.png" usemap="#pipeline-map">
+
+                            <map name="pipeline-map" id="pipeline-map">
+                                <area target="" title="" onclick="scroll_to(1);" coords="16,17,255,56" shape="rect">
+                                <area target="" title="" onclick="scroll_to(2);" coords="17,87,254,118" shape="rect">
+                                <area target="" title="" onclick="scroll_to(3);" coords="15,151,257,181" shape="rect">
+                                <area target="" title="" onclick="scroll_to(4);" coords="14,213,256,246" shape="rect">
+                                <area target="" title="" onclick="scroll_to(5);" coords="14,275,257,315" shape="rect">
+                                <area target="" title="" onclick="scroll_to(6);" coords="16,344,256,384" shape="rect">
+                                <area target="" title="" onclick="scroll_to(7);" coords="17,415,255,455" shape="rect">
+                                <area target="" title="" onclick="scroll_to(8);" coords="17,486,257,516" shape="rect">
+                                <area target="" title="" onclick="scroll_to(9);" coords="16,547,256,586" shape="rect">
+                            </map>
+                        </center>
+                    </div>
+
+                    <div class="col-md col-lg-8">
+                        <strong>How OpenGL transforms 3D data into this:</strong>
+                        <img src="img/opengl_animated-02.gif" width="100%" class="my-3">
+                    
+                        <div class="container pipeline-stage" id="pipe-stage1">
+                            <h3>Vertex Specification</h3>
+                            <p style="line-height: 2.0em;"><strong>The process of vertex specification is where the application sets up an ordered list of vertices to send to the pipeline.</strong><br/> These vertices define the boundaries of a primitive.
+
+Primitives are basic drawing shapes, like triangles, lines, and points. Exactly how the list of vertices is interpreted as primitives is handled via a later stage.
+
+This part of the pipeline deals with a number of objects like Vertex Array Objects and Vertex Buffer Objects. Vertex Array Objects define what data each vertex has, while Vertex Buffer Objects store the actual vertex data itself.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage2">
+                            <h3>Vertex Shader</h3>
+                            <p style="line-height: 2.0em;"><strong>Vertex shaders perform basic processing of each individual vertex.</strong><br/> Vertex shaders receive the attribute inputs from the vertex rendering and converts each incoming vertex into a single outgoing vertex based on an arbitrary, user-defined program.
+
+Vertex shaders can have user-defined outputs, but there is also a special output that represents the final position of the vertex. If there are no subsequent vertex processing stages, vertex shaders are expected to fill in this position with the clip-space position of the vertex, for rendering purposes.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage3">
+                            <h3>Tesselation</h3>
+                            <p style="line-height: 2.0em;"><strong>Primitives can be tessellated using two shader stages and a fixed-function tessellator between them.</strong><br/> The Tessellation Control Shader (TCS) stage comes first, and it determines the amount of tessellation to apply to a primitive, as well as ensuring connectivity between adjacent tessellated primitives. The Tessellation Evaluation Shader (TES) stage comes last, and it applies the interpolation or other operations used to compute user-defined data values for primitives generated by the fixed-function tessellation process.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage4">
+                            <h3>Geometry Shader</h3>
+                            <p style="line-height: 2.0em;"><strong>Geometry shaders are user-defined programs that process each incoming primitive, returning zero or more output primitives.</strong><br/>
+
+The input primitives for geometry shaders are the output primitives from a subset of the Primitive Assembly process. So if you send a triangle strip as a single primitive, what the geometry shader will see is a series of triangles.
+
+However, there are a number of input primitive types that are defined specifically for geometry shaders. These adjacency primitives give GS's a larger view of the primitives; they provide access to vertices of primitives adjacent to the current one.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage5">
+                            <h3>Vertex Post Processing</h3>
+                            <p style="line-height: 2.0em;"><strong>The outputs of the geometry shader or primitive assembly are written to a series of buffer objects that have been setup for this purpose.</strong><br/> This is called transform feedback mode; it allows the user to transform data via vertex and geometry shaders, then hold on to that data for use later.
+
+The data output into the transform feedback buffer is the data from each primitive emitted by this step.
+
+The primitives are then clipped. Clipping means that primitives that lie on the boundary between the inside of the viewing volume and the outside are split into several primitives, such that the entire primitive lies in the volume. Also, the last Vertex Processing shader stage can specify user-defined clipping operations, on a per-vertex basis.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage6">
+                            <h3>Primitive Assembly</h3>
+                            <p style="line-height: 2.0em;"><strong>Primitive assembly is the process of collecting a run of vertex data output from the prior stages and composing it into a sequence of primitives.</strong><br/> The type of primitive the user rendered with determines how this process works.
+
+The output of this process is an ordered sequence of simple primitives (lines, points, or triangles). If the input is a triangle strip primitive containing 12 vertices, for example, the output of this process will be 10 triangles.
+
+If tessellation or geometry shaders are active, then a limited form of primitive assembly is executed before these Vertex Processing stages. This is used to feed those particular shader stages with individual primitives, rather than a sequence of vertices.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage7">
+                            <h3>Rasterization</h3>
+                            <p style="line-height: 2.0em;"><strong>Primitives that reach this stage are then rasterized in the order in which they were given.</strong><br/> The result of rasterizing a primitive is a sequence of Fragments.
+
+A fragment is a set of state that is used to compute the final data for a pixel (or sample if multisampling is enabled) in the output framebuffer. The state for a fragment includes its position in screen-space, the sample coverage if multisampling is enabled, and a list of arbitrary data that was output from the previous vertex or geometry shader.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage8">
+                            <h3>Fragment Shader</h3>
+                            <p style="line-height: 2.0em;"><strong>The data for each fragment from the rasterization stage is processed by a fragment shader.</strong><br/> The output from a fragment shader is a list of colors for each of the color buffers being written to, a depth value, and a stencil value. Fragment shaders are not able to set the stencil data for a fragment, but they do have control over the color and depth values.</p>
+                        </div>
+                    
+                        <div class="container pipeline-stage" id="pipe-stage9">
+                            <h3>Per Sample Operations</h3>
+                            <p style="line-height: 2.0em;"><strong>The fragment data output from the fragment processor is then passed through a sequence of steps.</strong><br/>
+
+The first step is a sequence of culling tests; if a test is active and the fragment fails the test, the underlying pixels/samples are not updated (usually). Many of these tests are only active if the user activates them.</p>
+                        </div>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="footer text-dark p-3">
+            <div class="container">
+                <div class="row justify-content-md-center py-2">
+                    <div class="col">
+                        <p class="my-0" >Contact Info: </p>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                    </div>
+
+                    <div class="col mb-3">
+                        <p class="my-0 mb-3">Sitemap</p>
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href="#" class="text-muted">Home</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">About</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Gallery</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Publications</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">News</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Events</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Contact Us</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Apply Now</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm">
+                        <p>Developer:</p>
+                        <p class="text-muted">Uriel Federez</p>
+                    </div> 
+
+
+                    <div class="col ">
+                        <p>Other Contact Info:</p>
+                        <p class="text-muted">
+                        9450 SW Gemini Drive #45043
+                        Beaverton, OR 97008-6018 USA<br/>
+                        Office: +1 (415) 869-8627<br/>
+                        Fax: +1 (707) 202-0030
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script src="js/jquery.rwdImageMaps.js"></script>
+        <script src="js/jquery.rwdImageMaps.min.js"></script>
+        <script>
+            $(document).ready(function(e) {
+                $("#pipeline").width("75%");
+                $('#pipeline[usemap]').rwdImageMaps();
+            });
+
+            function scroll_to(index) {
+                window.scrollTo(0, $("#pipe-stage" + index).offset().top - ($("#nav_bar").height() + $('h1').height()));
+            }
+        </script>
+    </body>
+</html>
