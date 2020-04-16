@@ -2,20 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 55px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-}
-
-.fa-twitter, .fa-youtube {
-    background: #222;
-    text-decoration: none;
-}
-
 .jumbo-bg {
     height: 100vh;
     background: linear-gradient(to bottom,  rgba(255,255,255,0.0) 0%, 
