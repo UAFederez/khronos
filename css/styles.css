@@ -2,8 +2,18 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 55px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
 
+.fa-twitter, .fa-youtube {
+    background: #222;
+    text-decoration: none;
 }
 
 .jumbo-bg {

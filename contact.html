@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css" type="text/css"/>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <title>Contact &mdash; OpenGL</title>
     </head>
@@ -54,33 +55,127 @@
                 </div>
             </div>
             <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h4><strong>Contact Us Directly</strong></h4>
+                        <p style="line-height: 2.0em">
+                            The Khronos Group creates and maintains the standards that many hardware 
+                            and software companies use to create their products. As such, if you need 
+                            further assistance with a product, <strong>you should contact the manufacturer.</strong>
+                            <br/>
+                            If you would like to provide feedback on this website, feel free to use the
+                            form below or any of our contact information provided on the suceeding table
+                        </p>
+                        <form action="mailto:uaf@khr.org">
+                            <div class="form-group">
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <input type = "text" class="form-control" placeholder = "First Name" name = "fname" required>
+                                    </div>
+
+                                    <div class="col">
+                                        <input type = "text" class="form-control" placeholder = "First Name" name = "lname" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <input type = "email" class="form-control" placeholder = "E-mail address" name = "email" required>
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <input type = "number" class="form-control" placeholder = "Phone Number (optional)" name = "phonenum">
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <textarea rows="3" class="form-control" name="message" placeholder="Enter your Message here" style="resize: none;" required></textarea>
+                                    </div>
+                                    <div class="container ml-3 my-3">
+                                        <input type = "checkbox" class="form-check-input" id="newsletter" name ="newsl">
+                                        <label for="newsletter">I would like to subscribe to the monthly Khronos Group Newsletter</label>
+                                    </div>
+                                </div>
+
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <button class="btn btn-primary" type = "submit" class="form-control">Submit</button>
+                                        <button class="btn btn-danger" type = "Reset" class="form-control">Reset</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <table class="table">
+                            <thead>
+                                <tr class="text-light bg-dark">
+                                    <th colspan="2">
+                                        <h4 class="my-0"><strong>Other Ways to Contact</strong></h4>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mailing Address:</td>
+                                    <td>9450 SW Gemini Drive #45043
+                                        Beaverton, OR 97008-6018 USA</td>
+                                </tr>
+                                <tr>
+                                    <td>Office Telephone Number:</td>
+                                    <td>+1 (415) 869-8627</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row my-5">
+                        <div class="col-md-10">
+                            <h3><strong>Technical Support</strong></h3>
+                            <p style="line-height: 2.0em">
+                            If you are looking for hardware that supports a specific Khronos standard such as <strong>OpenGL</strong>, 
+                            please refer to the <a href="faq.html">Frequently Asked Questions</a> page. On this page, choose the Khronos standard in which you are 
+                            interested, then the page will list the products that have been verified to be conformant with that 
+                            standard. Questions about the hardware should be addressed to the hardware manufacturer.
+                            <br/><br/>
+                            <strong>For questions about software</strong>, Khronos is a consortium of companies that defines standards, 
+                            but we do not make any products around them. Instead we maintain the standards which hardware companies 
+                            support with drivers, and which software companies implement in their own products.
+                        </div>
+                    </div>
+                </div>
             </div>
             </div>
         </div>
-        <footer class="footer text-dark p-3">
+        <footer class="footer bg-dark text-light p-3">
             <div class="container">
                 <div class="row justify-content-md-center py-2">
                     <div class="col">
-                        <p class="my-0" >Contact Info: </p>
-                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
-                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
-                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
-                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
-                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <p class="my-0" >Social Media</p>
+                        <a href="https://twitter.com/thekhronosgroup" class="fa fa-twitter text-light"></a>
+                        <a href="#" class="fa fa-youtube text-light"></a>
                     </div>
 
                     <div class="col mb-3">
                         <p class="my-0 mb-3">Sitemap</p>
 
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item"><a href="#" class="text-muted">Home</a></li>
-                            <li class="nav-item"><a href="#" class="text-muted">About</a></li>
-                            <li class="nav-item"><a href="#" class="text-muted">Gallery</a></li>
-                            <li class="nav-item"><a href="#" class="text-muted">Publications</a></li>
-                            <li class="nav-item"><a href="#" class="text-muted">News</a></li>
-                            <li class="nav-item"><a href="#" class="text-muted">Events</a></li>
-                            <li class="nav-item"><a href="#" class="text-muted">Contact Us</a></li>
-                            <li class="nav-item"><a href="#" class="text-muted">Apply Now</a></li>
+                            <li class="nav-item"><a href="index.html" class="text-muted">Home</a></li>
+                            <li class="nav-item"><a href="about.html" class="text-muted">About</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Resources</a>
+                                <ul class="navbar-nav ml-3">
+                                    <li class="nav-item"><a href="pipeline.html" class="text-muted">OpenGL Rendering Pipeline</a>
+                                    <li class="nav-item"><a href="glut.html" class="text-muted">OpenGL Utility Libraries</a>
+                                    <li class="nav-item"><a href="perfbench.html" class="text-muted">OpenGL Performance Benchmarks</a>
+                                    <li class="nav-item"><a href="faq.html" class="text-muted">Frequently Asked Questions</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="news.html" class="text-muted">News</a></li>
+                            <li class="nav-item"><a href="contact.html" class="text-muted">Contact Us</a></li>
                         </ul>
                     </div>
 
@@ -92,6 +187,7 @@
 
                     <div class="col ">
                         <p>Other Contact Info:</p>
+                        <img src="img/khronos-logo-inverted.svg" class="my-3" width="100%">
                         <p class="text-muted">
                         9450 SW Gemini Drive #45043
                         Beaverton, OR 97008-6018 USA<br/>
