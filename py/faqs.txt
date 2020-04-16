@@ -1,0 +1,51 @@
+What is OpenGL?
+OpenGL is the name for the specification that describes the behavior of a rasterization-based rendering system. It defines the API through which a client application can control this system. The OpenGL rendering system is carefully specified to make hardware implementations allowable.
+Hardware vendors, the people who make GPUs, are responsible for writing implementations of the OpenGL rendering system. Their implementations, commonly called "drivers", translate OpenGL API commands into GPU commands. If a particular piece of hardware is unable to implement all of the OpenGL specification via hardware, the hardware vendor must still provide this functionality, typically via a software-based implementation of the features missing from hardware.
+|
+What is NOT OpenGL?
+The OpenGL API only deals with rendering graphics. OpenGL does not provide functions for animations, timing, file IO, image file format processing, GUI, and so forth. OpenGL is concerned only about rendering.
+GLUT is not OpenGL. It is not a part of OpenGL; it is simply a library that is used by some users to create an OpenGL window.
+|
+Who maintains the OpenGL specification?
+The OpenGL specification is maintained by the Khronos Group committee called the OpenGL Architectural Review Board (ARB). Originally, the ARB was an organization sponsored by SGI, but it was adopted by the Khronos Group.
+|
+Is OpenGL Open Source?
+No, OpenGL doesn't have any source code. GL is a specification which can be found on this website. It describes the interface the programmer uses and expected behavior. OpenGL is an open specification. Anyone can download the spec for free. This is as opposed to ISO standards and specifications, which cost money to access.
+
+Mesa3D is an open source software implementation of the OpenGL specification. The latest versions implement OpenGL 4.3, OpenGL ES 2.0, GLSL 3.30 (and several extensions) and EGL 1.4.
+|
+Where can I download OpenGL?
+Just like the Open Source section explains, OpenGL is not a software product. It is a specification.
+
+On Mac OS X, Apple's OpenGL implementation is included in the OS.
+
+On Windows, hardware vendors (such as NVIDIA or AMD/ATI) use the spec to write their own implementation, so OpenGL is included in the drivers that they supply. For laptop owners, however, you'll need to visit the manufacturer of your laptop and download the drivers from them.
+
+Updating your graphics drivers is usually enough to get the latest OpenGL implementation for your graphics hardware. This is sufficient for those who want to use applications that require OpenGL.
+|
+What platforms have GL?
+<ul><li><strong>Windows:</strong> 95 and above</li>
+<li><strong>Mac OSX:</strong> all versions</li>
+<li><strong>Linux:</strong> OpenGL is provided by open source drivers and MESA library, or by proprietary drivers.</li>
+<li><strong>FreeBSD:</strong>    OpenGL is provided by open source drivers and MESA library or proprietary Nvidia drivers.</li></ul>
+|
+What is an OpenGL context and why do you need a window to do GL rendering?
+The GL context comprises resources (driver resources in RAM, texture IDs assigned, VBO IDs assigned, enabled states (<samp>GL_BLEND</samp>, <samp>GL_DEPTH_TEST</samp>) and many other things). Think of the GL context as some memory allocated by the driver to store some information about the state of your GL program.
+
+You must create a GL context in order for your GL function calls to make sense
+|
+How Does It Work On Windows?
+All Windows versions support OpenGL.
+<br/>
+When you compile an application, you link with opengl32.dll (even on Win64).
+When you run your program, <samp>opengl32.dll</samp> gets loaded and it checks in the Windows registry if there is a true GL driver. If there is, it will load it. For example, ATI's GL driver name starts with <samp>atioglxx.dll</samp> and NVIDIA's GL driver is <samp>nvoglv32.dll</samp>. The actual names can change from release versions.
+<br/>
+The Microsoft Windows DLL <samp>opengl32.dll</samp> only directly exposes OpenGL 1.1 functions. To gain access to functions from higher GL versions, you must load these function pointers manually with wglGetProcAddress. The details of this process is explained.
+<br/>
+There are several helper libraries for this, doing what is commonly called Extension Loading Libraries.
+The important thing to know is that <samp>opengl32.dll</samp> belongs to Microsoft. No one can modify it. You must not replace it. You must not ship your application with this file. You must not ship nvoglv32.dll or any other system file either.
+|
+How do I tell what version of OpenGL I'm using?
+Once an OpenGL context is created, information about it can be queried through a number of APIs. <code>glGetString</code> can be used with <samp>GL_VERSION</samp> to get the version as a string. However, the glGetIntegerv function with <samp>GL_MAJOR_VERSION</samp> and <samp>GL_MINOR_VERSION</samp> can be used to fetch the version number as integers. The latter requires GL 3.0+.
+
+In order to get the latest version that your GPU supports, make sure that you update your video drivers. GL support is included in your video card's drivers. Also, you might notice that your GL version is for example 2.1. How can you get the latest version? It depends on your GPU. It is possible that your GPU doesn't support anything higher therefore the manufacturer of you video card doesn't provide a higher version. In that case, you can either buy a new video card or try Mesa3D (which is a software renderer)

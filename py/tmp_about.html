@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{ header_tmp | indent(width = 8, first = False) }}
+        <title>About &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        {{ nav_tmp | indent(width = 8, first = False) }}
+
+        <div id="content" class="container-fluid text-dark mb-3 no-jumbotron px-0">
+            <div class="container-fluid title-bg">
+                <div class="container">
+                    <h1>About The Khronos Group</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <h2>Khronos Group History</h2>
+                        <p style="line-height: 2.0em">
+                            The Khronos Group, Inc. is an American non-profit member-funded 
+                            industry consortium based in Beaverton, Oregon, focused on the 
+                            creation of open standard, royalty-free application programming 
+                            interfaces (APIs) for authoring and accelerated playback of 
+                            dynamic media on a wide variety of platforms and devices. 
+                            Khronos members may contribute to the development of Khronos API 
+                            specifications, vote at various stages before public deployment, 
+                            and accelerate delivery of their platforms and applications 
+                            through early access to specification drafts and conformance tests
+                          </p>
+                    </div>
+                    <div class="col-md">
+                        <img src="img/khr_standards.jpg" width="100%">
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <h2>Khronos Organizational Chart</h2>
+                        <p style="line-height: 2.0em">
+                        <span class="lead">IP Zones are an organizational mechanism layered over the IP 
+                        framework. 
+                        </span>
+                        <br/>The Khronos Board identifies which working groups 
+                        are routinely sharing design contributions and organize them 
+                        into IP Zones in order to clearly manage a web of Working Group 
+                        Exclusion Certificates. An ‘IP Zone’ is simply an agreed set of 
+                        working groups that are sharing design contributions
+                        </p>
+                    </div>
+                    <div class="col-md">
+                        <img src="img/khr_org_chart.jpg" width="100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container py-3">
+                <h2><strong>Our Leading Technology: OpenGL</strong></h2>
+            </div>
+
+            <div class="container about-bg">
+                <div class="container">
+                    <div class="row text-center py-5">
+                        <div class="col-md">
+                            <div class="card-md bg-light shadow">
+                                <div class="card-body">
+                                    <h3 class="card-title">Most Widely Adopted Graphics Standard</h3>
+                                    <small>
+                                        Since its introduction in 1992, OpenGL has become the industry's 
+                                        most widely used and supported 2D and 3D graphics application programming 
+                                        interface (API).
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="card-md bg-light shadow">
+                                <div class="card-body">
+                                    <h3 class="card-title">The Foundation for Advanced APIs</h3>
+                                    <small>
+                                        Leading software developers use OpenGL, with its robust rendering libraries, 
+                                        as the 2D/3D graphics foundation for higher-level APIs. Developers leverage 
+                                        the capabilities of OpenGL to deliver highly differentiated, yet widely 
+                                        supported vertical market solutions
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="card-md bg-light shadow">
+                                <div class="card-body">
+                                    <h3 class="card-title">Continued Innovation</h3>
+                                    <small>
+                                        The OpenGL standard is constantly evolving. Formal revisions occur at 
+                                        periodic intervals, and extensions allowing application developers to 
+                                        access the latest hardware advances through OpenGL are continuously 
+                                        being developed.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2 class="mb-3">OpenGL In the Industry</h2>
+            <div id="carouselControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100"  src="img/rdr2_gameplay.jpg" alt="Used in games">
+                        <div class="carousel-caption d-none d-md-block text-right">
+                            <h2><strong>Real-time Graphics for Games</strong></h2>
+                            <p >OpenGL is used for high-quality and realistic 3D renderings.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"  src="img/medvis.png" alt="Medical Visualization">
+                        <div class="carousel-caption d-none d-md-block text-left">
+                            <h2><strong>Efficient Scientific Visualization</strong></h2>
+                            <p >Many scientific and medical tools and software globally powered by OpenGL.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"  src="img/architecture.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block" style="text-shadow: 0px 1px 4px #222;">
+                            <h2><strong>Building Tools and Structures</strong></h2>
+                            <p >Leading the forefront in efficient structural and architectural visualization.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <h2>High Quality and Performance</h2>
+            <div class="row mb-5 mt-3">
+                <div class="col-md">
+                    <p style="line-height: 2.0em">
+                    <span class="lead">
+                    OpenGL fosters innovation and speeds application development by incorporating a 
+                    broad set of rendering, texture mapping, special effects, and other powerful 
+                    visualization functions.
+                    </span>
+                    <br/>
+                    Any visual computing application requiring maximum performance &mdash; from <strong>3D animation </strong>to 
+                    <strong>CAD to visual simulation</strong> &mdash; can exploit high-quality, high-performance OpenGL capabilities. 
+                    These capabilities allow developers in diverse markets such as broadcasting, CAD/CAM/CAE, 
+                    entertainment, medical imaging, and virtual reality to produce and display incredibly 
+                    compelling 2D and 3D graphics.
+                    </p>
+                </div>
+                <div class="col-md">
+                    <img src="img/cad-demo.jpg" width="100%">
+                </div>
+            </div>
+
+            <div class="row mb-5 mt-3">
+                <div class="col-md">
+                    <img src="img/ogl_graphics.jpg" width="100%" class="shadow">
+                </div>
+                <div class="col-md">
+                    <h2>Simplifies Software Development</h2>
+                    <p style="line-height: 2.0em">
+                    <span class="lead">OpenGL routines simplify the development of graphics software.</span><br/>From rendering a
+                    <strong>simple geometric point</strong>, line, or filled polygon to the creation of the most complex 
+                    <strong>lighted and texture-mapped NURBS curved surface.</strong>OpenGL gives software developers 
+                    access to geometric and image primitives, display lists, modeling transformations, 
+                    lighting and texturing, anti-aliasing, blending, and many other features.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-5 mt-3">
+                <div class="col-md">
+                    <h2>Flexible and Extensible</h2>
+                    <p style="line-height: 2.0em">
+                    <span class="lead">Platform vendors have 
+                        the freedom to tailor a particular OpenGL implementation to meet unique system cost and performance objectives.</span><br/>
+                        Individual calls can be executed on dedicated hardware, run as software routines on the standard system CPU, 
+                        or implemented as a combination of both dedicated hardware and software routines. This implementation flexibility means 
+                        that OpenGL hardware acceleration can range from <strong>simple rendering to full geometry </strong> and is widely available on everything 
+                        from low-cost PCs to <strong>high-end workstations and supercomputers.</strong>
+                    </p>
+                </div>
+                <div class="col-md">
+                    <img src="img/tesselation.jpg" width="100%" class="shadow-lg">
+                </div>
+            </div>
+        </div>
+        {{ footer_tmp | indent(width = 8, first = False) }}
+    </body>
+</html>
