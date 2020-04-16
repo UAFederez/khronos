@@ -18,17 +18,17 @@
         <header>
             <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
                 <a class="navbar-brand" href="#">
-                    <img src="img/ogl-logo.png" height="40" class="align-bottom">
+                    <img src="img/Khronos_logo.svg" height="30" class="align-bottom">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+                <button class="navbar-toggler bg-light navbar-light" type="button" data-toggle="collapse" data-target="#main-nav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
                 <nav class="collapse navbar-collapse" id="main-nav"> 
                     <ul class="navbar-nav justify-content-center">
                         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About OpenGL</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="docDropdown" role="button" data-toggle="dropdown">Resources</a>
 
@@ -40,7 +40,6 @@
                             </div>
                         </li>
                         <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
-                        <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
@@ -55,12 +54,17 @@
                 </div>
             </div>
             <div class="container">
+                <center>
+                    <img src="img/faq_bg.jpg" width="80%">
+                </center>
+            </div>
+            <div class="container">
                 <div class="accordion" id="faqAccordion">
                     
                         <div class="card">
                             <div class="card-header" id="heading1">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                         What is OpenGL?
                                     </button>
                                 </h2>
@@ -79,7 +83,7 @@ Hardware vendors, the people who make GPUs, are responsible for writing implemen
                         <div class="card">
                             <div class="card-header" id="heading2">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                         What is NOT OpenGL?
                                     </button>
                                 </h2>
@@ -98,7 +102,7 @@ GLUT is not OpenGL. It is not a part of OpenGL; it is simply a library that is u
                         <div class="card">
                             <div class="card-header" id="heading3">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                         Who maintains the OpenGL specification?
                                     </button>
                                 </h2>
@@ -116,7 +120,7 @@ GLUT is not OpenGL. It is not a part of OpenGL; it is simply a library that is u
                         <div class="card">
                             <div class="card-header" id="heading4">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                         Is OpenGL Open Source?
                                     </button>
                                 </h2>
@@ -136,7 +140,7 @@ Mesa3D is an open source software implementation of the OpenGL specification. Th
                         <div class="card">
                             <div class="card-header" id="heading5">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
                                         Where can I download OpenGL?
                                     </button>
                                 </h2>
@@ -160,7 +164,7 @@ Updating your graphics drivers is usually enough to get the latest OpenGL implem
                         <div class="card">
                             <div class="card-header" id="heading6">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
                                         What platforms have GL?
                                     </button>
                                 </h2>
@@ -181,7 +185,7 @@ Updating your graphics drivers is usually enough to get the latest OpenGL implem
                         <div class="card">
                             <div class="card-header" id="heading7">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                         What is an OpenGL context and why do you need a window to do GL rendering?
                                     </button>
                                 </h2>
@@ -193,6 +197,52 @@ Updating your graphics drivers is usually enough to get the latest OpenGL implem
                                     The GL context comprises resources (driver resources in RAM, texture IDs assigned, VBO IDs assigned, enabled states (<samp>GL_BLEND</samp>, <samp>GL_DEPTH_TEST</samp>) and many other things). Think of the GL context as some memory allocated by the driver to store some information about the state of your GL program.
 
 You must create a GL context in order for your GL function calls to make sense
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading8">
+                                <h2 class="mb-0">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                        How Does It Work On Windows?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse8" class="collapse" aria-labelledby="collapse8" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    All Windows versions support OpenGL.
+<br/>
+When you compile an application, you link with opengl32.dll (even on Win64).
+When you run your program, <samp>opengl32.dll</samp> gets loaded and it checks in the Windows registry if there is a true GL driver. If there is, it will load it. For example, ATI's GL driver name starts with <samp>atioglxx.dll</samp> and NVIDIA's GL driver is <samp>nvoglv32.dll</samp>. The actual names can change from release versions.
+<br/>
+The Microsoft Windows DLL <samp>opengl32.dll</samp> only directly exposes OpenGL 1.1 functions. To gain access to functions from higher GL versions, you must load these function pointers manually with wglGetProcAddress. The details of this process is explained.
+<br/>
+There are several helper libraries for this, doing what is commonly called Extension Loading Libraries.
+The important thing to know is that <samp>opengl32.dll</samp> belongs to Microsoft. No one can modify it. You must not replace it. You must not ship your application with this file. You must not ship nvoglv32.dll or any other system file either.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card">
+                            <div class="card-header" id="heading9">
+                                <h2 class="mb-0">
+                                    <button class="text-left btn btn-link" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                        How do I tell what version of OpenGL I'm using?
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapse9" class="collapse" aria-labelledby="collapse9" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <p style="line-height: 2.0em">
+                                    Once an OpenGL context is created, information about it can be queried through a number of APIs. <code>glGetString</code> can be used with <samp>GL_VERSION</samp> to get the version as a string. However, the glGetIntegerv function with <samp>GL_MAJOR_VERSION</samp> and <samp>GL_MINOR_VERSION</samp> can be used to fetch the version number as integers. The latter requires GL 3.0+.
+
+In order to get the latest version that your GPU supports, make sure that you update your video drivers. GL support is included in your video card's drivers. Also, you might notice that your GL version is for example 2.1. How can you get the latest version
                                     </p>
                                 </div>
                             </div>

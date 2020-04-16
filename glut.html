@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--Stylesheets here (bootstrap first)-->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>Performance Benchmarks &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
+                <a class="navbar-brand" href="#">
+                    <img src="img/Khronos_logo.svg" height="30" class="align-bottom">
+                </a>
+
+                <button class="navbar-toggler bg-light navbar-light" type="button" data-toggle="collapse" data-target="#main-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav class="collapse navbar-collapse" id="main-nav"> 
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="docDropdown" role="button" data-toggle="dropdown">Resources</a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pipeline.html">Rendering Pipeline</a>
+                                <a class="dropdown-item" href="glut.html">OpenGL Utility Libraries</a>
+                                <a class="dropdown-item" href="perfbench.html">Performance Benchmarks</a>
+                                <a class="dropdown-item" href="faq.html">FAQs</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </header>
+
+
+        <div id="content" class="container text-dark mb-3 no-jumbotron px-0">
+            <div class="container title-bg">
+                <h1>OpenGL Utility Libraries</h1>
+            </div>
+                
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-md-5 p-3">
+                        <center><img src="img/gears.jpg" width="100%" class="shadow-lg"></center>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="lead">
+                        <strong>GLUT</strong> is the OpenGL Utility Toolkit, a window system independent toolkit 
+                        for writing OpenGL programs. 
+                        </p> 
+                        <p style="line-height: 2.0em">
+                        It implements a simple windowing application 
+                        programming interface (API) for OpenGL. GLUT makes it considerably easier 
+                        to learn about and explore OpenGL Programming.
+
+                        The original GLUT has been unsupported for 20 years. Although a new
+                        implementation has been developed called <strong>FreeGLUT.</strong>
+                        <br/><br/>
+                        <i>FreeGLUT</i> is a free-software/open-source alternative to the OpenGL Utility Toolkit (GLUT) library. GLUT was originally written by Mark Kilgard to support the sample programs in the second edition OpenGL 'RedBook'. Since then, GLUT has been used in a wide variety of practical applications because it is simple, widely available and highly portable.
+
+                        GLUT (and hence freeglut) takes care of all the system-specific chores required for creating windows, initializing OpenGL contexts, and handling input events, to allow for trully portable OpenGL programs.
+
+                        freeglut is released under the X-Consortium license.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 p-3">
+                        <center><img src="img/mesa3d.jpg" width="100%" class="shadow-lg"></center>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="lead">
+                        <strong>Mesa</strong> is an open-source OpenGL implementation, continually updated to 
+                        support the latest OpenGL specification.
+                        <p>
+                        <p style="line-height: 2.0em">
+                        <strong>The Direct Rendering Infrastructure,</strong>also known as the DRI, is a 
+                        framework for allowing direct access to graphics hardware under the 
+                        X Window System in a safe and efficient manner. It includes 
+                        changes to the X server, to several client libraries, and to the 
+                        kernel (DRM, Direct Rendering Manager). The most important use for 
+                        the DRI is to create fast OpenGL implementations providing hardware 
+                        acceleration for Mesa. Several 3D accelerated drivers have been 
+                        written to the DRI specification, including drivers for chipsets 
+                        produced by 3DFX, AMD (formerly ATI), Intel and Matrox.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container mt-5">
+                    <h3>Higher Level OpenGL-based Libraries</h3>
+                    <p>There are also other commercial libraries widely used in the industry
+                    which are powered with the 3D rendering capabilities of the OpenGL API
+                    which ensure proper cross-platform support as well as accurately 
+                    rendered graphics optmized for different fields of work and research.
+                    Among these are <strong>Open Inventor</strong>, <strong>Quesa3D</strong>,
+                    and <strong>Open Scene Graph</strong>. <span class="text-muted">Click on
+                    any image to view it fully.</span>
+                    </p>
+                </div>
+
+                <div class="row">
+                    <!-- Image thumbails -->
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/openinv_1_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb1" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/openinv_2_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb2" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/openinv_3_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb3" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/openinv_4_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb4" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/osc1_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb5" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/osc2_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb6" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/osc3_thumb.png" class="img-thumbnail" data-toggle="modal" data-target="#lb7" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/osc4_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb8" width="100%"></div>
+                    
+                        <div class="col-4 p-3"><img type="button" src="img/lightbox/thumb/quesa_3d_thumb.jpg" class="img-thumbnail" data-toggle="modal" data-target="#lb9" width="100%"></div>
+                    
+                </div>
+
+                
+                <div class="modal fade" id="lb1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Inventor for Medicine</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/openinv_1.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Inventor for Engineering</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/openinv_2.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Inventor for Mining & Oil</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/openinv_3.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Inventor for Cloud Computing</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/openinv_4.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Scene Graph for Architecture</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/osc1.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Scene Graph for Transportation</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/osc2.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Scene Graph for Construction</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/osc3.png" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Open Scene Graph for Flight Simulation</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/osc4.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="lb9" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Quesa 3D Demo for Geometry</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/lightbox/quesa_3d.jpg" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="container">
+
+            </div>
+        </div>
+        <footer class="footer text-dark p-3">
+            <div class="container">
+                <div class="row justify-content-md-center py-2">
+                    <div class="col">
+                        <p class="my-0" >Contact Info: </p>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                    </div>
+
+                    <div class="col mb-3">
+                        <p class="my-0 mb-3">Sitemap</p>
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href="#" class="text-muted">Home</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">About</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Gallery</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Publications</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">News</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Events</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Contact Us</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Apply Now</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm">
+                        <p>Developer:</p>
+                        <p class="text-muted">Uriel Federez</p>
+                    </div> 
+
+
+                    <div class="col ">
+                        <p>Other Contact Info:</p>
+                        <p class="text-muted">
+                        9450 SW Gemini Drive #45043
+                        Beaverton, OR 97008-6018 USA<br/>
+                        Office: +1 (415) 869-8627<br/>
+                        Fax: +1 (707) 202-0030
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>

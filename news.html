@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--Stylesheets here (bootstrap first)-->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+        <title>News & Events &mdash; OpenGL</title>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
+                <a class="navbar-brand" href="#">
+                    <img src="img/Khronos_logo.svg" height="30" class="align-bottom">
+                </a>
+
+                <button class="navbar-toggler bg-light navbar-light" type="button" data-toggle="collapse" data-target="#main-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav class="collapse navbar-collapse" id="main-nav"> 
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="docDropdown" role="button" data-toggle="dropdown">Resources</a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="pipeline.html">Rendering Pipeline</a>
+                                <a class="dropdown-item" href="glut.html">OpenGL Utility Libraries</a>
+                                <a class="dropdown-item" href="perfbench.html">Performance Benchmarks</a>
+                                <a class="dropdown-item" href="faq.html">FAQs</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </nav>
+        </header>
+
+
+        <div id="content" class="container-fluid text-dark mb-3 no-jumbotron px-0">
+            <div class="container-fluid title-bg">
+                <div class="container">
+                    <h1>News and Events</h1>
+                </div>
+            </div>
+
+            <div class="container pt-0" id="main-content">
+                <h2>Featured News</h2>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="img/geforce.jpg" class="mb-3 card-img-top" alt="GeForce">
+                                <h5 class="card-title"><a href="https://developer.nvidia.com/designworks">NVIDIA provides OpenGL-accelerated Remote Desktop for GeForce</a></h5>
+                                <p class="card-text text-muted">April 7, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="img/intelcpu.jpg" class="mb-3 card-img-top" alt="Intel CPU">
+                                <h5 class="card-title"><a href="https://www.phoronix.com/scan.php?page=news_item&px=Mesa-20.0-Defaults-Intel-G3D">Mesa 20.0 Now Defaults To The New Intel Gallium3D Driver For Faster OpenGL</a></h5>
+                                <p class="card-text text-muted">January 24, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-md-8 my-2">
+                        <h2>More Recent News</h2>
+
+                        <div class="card bg-light mb-3">
+                            <h5 class="card-header"><a href="https://www.khronos.org/news/press/khronos-group-releases-vulkan-1.2">Khronos Group Releases Vulkan 1.2</a></h5>
+                            <p class="card-body bg-light">
+                            The Khronos Group announces the release of the Vulkan 1.2 
+                            specification for GPU acceleration. This release integrates 23 proven 
+                            extensions into the core Vulkan API, bringing significant 
+                            developer-requested access to new hardware functionality, 
+                            improved application performance, and enhanced API usability 
+                            </p>
+                        </div>
+
+                        <div class="card bg-light mb-3">
+                            <h5 class="card-header"><a href="https://news.developer.nvidia.com/nvidia-announces-nsight-systems-2019-6/">NVIDIA announces Nsight Systems 2019.6 with OpenGL improvements</a></h5>
+                            <p class="card-body bg-light">
+                            NVIDIA Nsight Systems 2019.6 is now available for download. 
+                            This release expands graphics trace on Windows by adding support 
+                            for Direct3D 11, WDDM CPU+GPU queues, and OpenGL. On Linux, new 
+                            features include support for CUDA 10.2, simultaneous CLI sessions, 
+                            DWARF unwind and capture by hotkey.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 my-2" style="height: 500px; overflow: scroll;">
+                        <a class="twitter-timeline" href="https://twitter.com/opengl?ref_src=twsrc%5Etfw">Tweets by opengl</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container"> 
+                <h2>Upcoming Events</h2>
+                <div class="row my-3">
+                    <div class="col-sm-6">
+                        <h4><a href="https://www.eventbrite.com/e/ai-x-summit-odsc-east-2020-tickets-71670649843?discount=ODSC_TheKhronosGroup">OSDC East 2020</a></h4>
+                        <p>ODSC East 2020 is gearing up to be their largest and most exciting conference yet. 
+                        Not only will they have 100+ workshops and hands-on training sessions, 200+ speakers, 
+                        and 400 hours of content, they’ll also have numerous opportunities for you to learn 
+                        from and network with your peers and our expert speakers.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="img/osdc.png" width="100%">
+                    </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-sm-6">
+                        <h4><a href="https://www.iwocl.org/">IWOCL / SYCLcon 2020</a></h4>
+                        <p>
+                        Join us at the 8th International Workshop on OpenCL, including SYCLcon 
+                        2020, for three days of talks, workshops and community networking aimed 
+                        at furthering the collaboration and knowledge sharing amongst the 
+                        international community of high-performance computing specialist working 
+                        with OpenCL, SYCL, SPIR and Vulkan Compute.
+                        </p></div>
+                        <div class="col-sm-6">
+                            <img src="img/iwocl.jpg" width="100%">
+                        </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-sm-6">
+                        <h4><a href="https://embeddedvisionsummit.com/">Embedded Vision Summit 2020</a></h4>
+                        <p>
+                        Don't miss this year’s OpenVX Workshop at Embedded Vision Summit. Khronos 
+                        will present a day-long hands-on workshop all about OpenVX cross-platform 
+                        neural network acceleration API for embedded vision applications. We’ve 
+                        developed a new curriculum so even if you attended in past years, this is 
+                        a do-not-miss, jam-packed tutorial with new information on computer vision 
+                        algorithms for feature tracking and neural networks mapped to the graph API.
+                        </p></div>
+                        <div class="col-sm-6">
+                            <img src="img/evs.jpg" width="100%">
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="container my-5">
+        </div>
+        <footer class="footer text-dark p-3">
+            <div class="container">
+                <div class="row justify-content-md-center py-2">
+                    <div class="col">
+                        <p class="my-0" >Contact Info: </p>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                        <a href="#" class="text-muted"><img src=""><p class="my-0">Facebook account</p></a>
+                    </div>
+
+                    <div class="col mb-3">
+                        <p class="my-0 mb-3">Sitemap</p>
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a href="#" class="text-muted">Home</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">About</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Gallery</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Publications</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">News</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Events</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Contact Us</a></li>
+                            <li class="nav-item"><a href="#" class="text-muted">Apply Now</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm">
+                        <p>Developer:</p>
+                        <p class="text-muted">Uriel Federez</p>
+                    </div> 
+
+
+                    <div class="col ">
+                        <p>Other Contact Info:</p>
+                        <p class="text-muted">
+                        9450 SW Gemini Drive #45043
+                        Beaverton, OR 97008-6018 USA<br/>
+                        Office: +1 (415) 869-8627<br/>
+                        Fax: +1 (707) 202-0030
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -9,9 +9,8 @@ py/
     [x] tmp_faq.html
     [x] tmp_pipeline.html
     [x] tmp_perfbench.html
-    [ ] tmp_glut.html
-    [ ] tmp_news.html
-    [ ] tmp_res.html
+    [x] tmp_glut.html
+    [x] tmp_news.html
     [ ] tmp_documentation.html
     [ ] tmp_contact.html
 
@@ -22,13 +21,13 @@ py/
     [x] Animated Images
     [x] Sliding Window / Images
     [x] Drop down (navigation bar) menu
-    [ ] Pop up image (lighbox)
+    [x] Pop up image (lighbox)
     [ ] CSS3 features
         [ ] CSS float
         [ ] CSS Opacity
         [x] CSS Navigation Bar
         [x] CSS Dropdowns
-        [ ] CSS Image Gallery
+        [x] CSS Image Gallery
         [x] CSS Rounded Corners
         [ ] CSS Border Images
         [x] CSS Colors (rgba)

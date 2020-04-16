@@ -1,4 +1,6 @@
 from jinja2 import Template
+from pathlib import Path
+import os
 
 def read_faqs_file():
     faqFile = open('faqs.txt')
@@ -40,8 +42,7 @@ def read_pipeline_file():
     return pipe
 
 pages = [ 'tmp_index.html', 'tmp_about.html', 'tmp_faq.html', 'tmp_perfbench.html',
-          'tmp_pipeline.html', 'tmp_glut.html', 'tmp_news.html', 'tmp_res.html',
-          'tmp_contact.html']
+          'tmp_pipeline.html', 'tmp_glut.html', 'tmp_news.html', 'tmp_contact.html']
 
 navTmp    = open('templates/nav_template.html').read()
 headerTmp = open('templates/header_template.html').read()
@@ -50,7 +51,7 @@ footerTmp = open('templates/footer_template.html').read()
 faqs = read_faqs_file()
 pipe = read_pipeline_file()
 
-for page in pages[:5]:
+for page in pages:
     print(f"{page}...")
     pageSource = open(page)
     template = Template(pageSource.read())
@@ -65,6 +66,37 @@ for page in pages[:5]:
                             nav_tmp    = navTmp, 
                             footer_tmp = footerTmp, 
                             pipeline   = pipe)
+    elif page == "tmp_glut.html":
+        files   = [ img for img in os.listdir(Path.cwd() / "../img/lightbox/") if '.' in img]
+        images  = [ ]
+        fileDir = "img/lightbox/"
+
+
+        files.sort()
+
+        descriptions = [
+                "Open Inventor for Medicine", 
+                "Open Inventor for Engineering", 
+                "Open Inventor for Mining & Oil",
+                "Open Inventor for Cloud Computing",
+                "Open Scene Graph for Architecture", 
+                "Open Scene Graph for Transportation", 
+                "Open Scene Graph for Construction",
+                "Open Scene Graph for Flight Simulation",
+                "Quesa 3D Demo for Geometry",
+        ]
+
+        for img in files:
+            filename  = os.path.splitext(img)
+            thumbnail = filename[0] + "_thumb" + filename[1]
+            # print((fileDir + img, fileDir + 'thumb/' + thumbnail))
+            images.append((fileDir + img, fileDir + 'thumb/' + thumbnail))
+
+        s = template.render(header_tmp = headerTmp, 
+                            nav_tmp    = navTmp, 
+                            footer_tmp = footerTmp, 
+                            images     = images,
+                            description = descriptions)
     else:
         s = template.render(header_tmp = headerTmp, nav_tmp = navTmp, footer_tmp = footerTmp)
 
