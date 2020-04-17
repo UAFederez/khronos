@@ -16,7 +16,6 @@
             </div>
 
             <div class="container">
-                <p class="lead">Click on a section of the pipeline to learn more.</p>
                 <div class="row">
                     <div class="col-md col-lg-4">
                         <center>
@@ -37,7 +36,9 @@
                     </div>
 
                     <div class="col-md col-lg-8">
-                        <strong>Learn how OpenGL transforms 3D data into stunning real-time images:</strong>
+                        <p class="text-muted">Click on a section of the pipeline to learn more.</p>
+                        <p><span class="lead">Learn how OpenGL transforms 3D data into stunning real-time images through a
+                            series of stages known as the <i>Graphics Pipeline</i></span></p>
                         <div class="row">
                             <div class="col">
                                 <img src="img/cube.gif" width="100%" class="my-3">
@@ -46,12 +47,16 @@
                                 <img src="img/opengl_animated-02.gif" width="100%" class="my-3">
                             </div>
                         </div>
-                    {% for stage in pipeline %}
-                        <div class="container pipeline-stage" id="pipe-stage{{loop.index}}">
-                            <h3>{{stage[0]}}</h3>
-                            <p style="line-height: 2.0em;">{{stage[1]}}</p>
-                        </div>
-                    {% endfor %}
+                        <ol>
+                            {% for stage in pipeline %}
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage{{loop.index}}">
+                                    <h3>{{stage[0]}}</h3>
+                                    <p style="line-height: 2.0em;">{{stage[1]}}</p>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ol>
                     </div>
                 </div>
 

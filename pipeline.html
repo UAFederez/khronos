@@ -17,12 +17,12 @@
 
     <body>
         <header>
-            <nav id="nav_bar" class="navbar fixed-top navbar-light navbar-expand-md bg-light shadow-sm">
-                <a class="navbar-brand" href="#">
-                    <img src="img/Khronos_logo.svg" height="30" class="align-bottom">
+            <nav id="nav_bar" class="navbar fixed-top navbar-dark navbar-expand-md bg-dark text-light shadow-sm">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/khronos-logo-inverted.svg" height="40" class="align-bottom">
                 </a>
 
-                <button class="navbar-toggler bg-light navbar-light" type="button" data-toggle="collapse" data-target="#main-nav">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
@@ -56,7 +56,6 @@
             </div>
 
             <div class="container">
-                <p class="lead">Click on a section of the pipeline to learn more.</p>
                 <div class="row">
                     <div class="col-md col-lg-4">
                         <center>
@@ -77,7 +76,9 @@
                     </div>
 
                     <div class="col-md col-lg-8">
-                        <strong>Learn how OpenGL transforms 3D data into stunning real-time images:</strong>
+                        <p class="text-muted">Click on a section of the pipeline to learn more.</p>
+                        <p><span class="lead">Learn how OpenGL transforms 3D data into stunning real-time images through a
+                            series of stages known as the <i>Graphics Pipeline</i></span></p>
                         <div class="row">
                             <div class="col">
                                 <img src="img/cube.gif" width="100%" class="my-3">
@@ -86,74 +87,94 @@
                                 <img src="img/opengl_animated-02.gif" width="100%" class="my-3">
                             </div>
                         </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage1">
-                            <h3>Vertex Specification</h3>
-                            <p style="line-height: 2.0em;"><strong>The process of vertex specification is where the application sets up an ordered list of vertices to send to the pipeline.</strong><br/> These vertices define the boundaries of a primitive.
+                        <ol>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage1">
+                                    <h3>Vertex Specification</h3>
+                                    <p style="line-height: 2.0em;"><strong>The process of vertex specification is where the application sets up an ordered list of vertices to send to the pipeline.</strong><br/> These vertices define the boundaries of a primitive.
 
 Primitives are basic drawing shapes, like triangles, lines, and points. Exactly how the list of vertices is interpreted as primitives is handled via a later stage.
 
 This part of the pipeline deals with a number of objects like Vertex Array Objects and Vertex Buffer Objects. Vertex Array Objects define what data each vertex has, while Vertex Buffer Objects store the actual vertex data itself.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage2">
-                            <h3>Vertex Shader</h3>
-                            <p style="line-height: 2.0em;"><strong>Vertex shaders perform basic processing of each individual vertex.</strong><br/> Vertex shaders receive the attribute inputs from the vertex rendering and converts each incoming vertex into a single outgoing vertex based on an arbitrary, user-defined program.
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage2">
+                                    <h3>Vertex Shader</h3>
+                                    <p style="line-height: 2.0em;"><strong>Vertex shaders perform basic processing of each individual vertex.</strong><br/> Vertex shaders receive the attribute inputs from the vertex rendering and converts each incoming vertex into a single outgoing vertex based on an arbitrary, user-defined program.
 
 Vertex shaders can have user-defined outputs, but there is also a special output that represents the final position of the vertex. If there are no subsequent vertex processing stages, vertex shaders are expected to fill in this position with the clip-space position of the vertex, for rendering purposes.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage3">
-                            <h3>Tesselation</h3>
-                            <p style="line-height: 2.0em;"><strong>Primitives can be tessellated using two shader stages and a fixed-function tessellator between them.</strong><br/> The Tessellation Control Shader (TCS) stage comes first, and it determines the amount of tessellation to apply to a primitive, as well as ensuring connectivity between adjacent tessellated primitives. The Tessellation Evaluation Shader (TES) stage comes last, and it applies the interpolation or other operations used to compute user-defined data values for primitives generated by the fixed-function tessellation process.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage4">
-                            <h3>Geometry Shader</h3>
-                            <p style="line-height: 2.0em;"><strong>Geometry shaders are user-defined programs that process each incoming primitive, returning zero or more output primitives.</strong><br/>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage3">
+                                    <h3>Tesselation</h3>
+                                    <p style="line-height: 2.0em;"><strong>Primitives can be tessellated using two shader stages and a fixed-function tessellator between them.</strong><br/> The Tessellation Control Shader (TCS) stage comes first, and it determines the amount of tessellation to apply to a primitive, as well as ensuring connectivity between adjacent tessellated primitives. The Tessellation Evaluation Shader (TES) stage comes last, and it applies the interpolation or other operations used to compute user-defined data values for primitives generated by the fixed-function tessellation process.</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage4">
+                                    <h3>Geometry Shader</h3>
+                                    <p style="line-height: 2.0em;"><strong>Geometry shaders are user-defined programs that process each incoming primitive, returning zero or more output primitives.</strong><br/>
 
 The input primitives for geometry shaders are the output primitives from a subset of the Primitive Assembly process. So if you send a triangle strip as a single primitive, what the geometry shader will see is a series of triangles.
 
 However, there are a number of input primitive types that are defined specifically for geometry shaders. These adjacency primitives give GS's a larger view of the primitives; they provide access to vertices of primitives adjacent to the current one.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage5">
-                            <h3>Vertex Post Processing</h3>
-                            <p style="line-height: 2.0em;"><strong>The outputs of the geometry shader or primitive assembly are written to a series of buffer objects that have been setup for this purpose.</strong><br/> This is called transform feedback mode; it allows the user to transform data via vertex and geometry shaders, then hold on to that data for use later.
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage5">
+                                    <h3>Vertex Post Processing</h3>
+                                    <p style="line-height: 2.0em;"><strong>The outputs of the geometry shader or primitive assembly are written to a series of buffer objects that have been setup for this purpose.</strong><br/> This is called transform feedback mode; it allows the user to transform data via vertex and geometry shaders, then hold on to that data for use later.
 
 The data output into the transform feedback buffer is the data from each primitive emitted by this step.
 
 The primitives are then clipped. Clipping means that primitives that lie on the boundary between the inside of the viewing volume and the outside are split into several primitives, such that the entire primitive lies in the volume. Also, the last Vertex Processing shader stage can specify user-defined clipping operations, on a per-vertex basis.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage6">
-                            <h3>Primitive Assembly</h3>
-                            <p style="line-height: 2.0em;"><strong>Primitive assembly is the process of collecting a run of vertex data output from the prior stages and composing it into a sequence of primitives.</strong><br/> The type of primitive the user rendered with determines how this process works.
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage6">
+                                    <h3>Primitive Assembly</h3>
+                                    <p style="line-height: 2.0em;"><strong>Primitive assembly is the process of collecting a run of vertex data output from the prior stages and composing it into a sequence of primitives.</strong><br/> The type of primitive the user rendered with determines how this process works.
 
 The output of this process is an ordered sequence of simple primitives (lines, points, or triangles). If the input is a triangle strip primitive containing 12 vertices, for example, the output of this process will be 10 triangles.
 
 If tessellation or geometry shaders are active, then a limited form of primitive assembly is executed before these Vertex Processing stages. This is used to feed those particular shader stages with individual primitives, rather than a sequence of vertices.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage7">
-                            <h3>Rasterization</h3>
-                            <p style="line-height: 2.0em;"><strong>Primitives that reach this stage are then rasterized in the order in which they were given.</strong><br/> The result of rasterizing a primitive is a sequence of Fragments.
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage7">
+                                    <h3>Rasterization</h3>
+                                    <p style="line-height: 2.0em;"><strong>Primitives that reach this stage are then rasterized in the order in which they were given.</strong><br/> The result of rasterizing a primitive is a sequence of Fragments.
 
 A fragment is a set of state that is used to compute the final data for a pixel (or sample if multisampling is enabled) in the output framebuffer. The state for a fragment includes its position in screen-space, the sample coverage if multisampling is enabled, and a list of arbitrary data that was output from the previous vertex or geometry shader.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage8">
-                            <h3>Fragment Shader</h3>
-                            <p style="line-height: 2.0em;"><strong>The data for each fragment from the rasterization stage is processed by a fragment shader.</strong><br/> The output from a fragment shader is a list of colors for each of the color buffers being written to, a depth value, and a stencil value. Fragment shaders are not able to set the stencil data for a fragment, but they do have control over the color and depth values.</p>
-                        </div>
-                    
-                        <div class="container pipeline-stage" id="pipe-stage9">
-                            <h3>Per Sample Operations</h3>
-                            <p style="line-height: 2.0em;"><strong>The fragment data output from the fragment processor is then passed through a sequence of steps.</strong><br/>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage8">
+                                    <h3>Fragment Shader</h3>
+                                    <p style="line-height: 2.0em;"><strong>The data for each fragment from the rasterization stage is processed by a fragment shader.</strong><br/> The output from a fragment shader is a list of colors for each of the color buffers being written to, a depth value, and a stencil value. Fragment shaders are not able to set the stencil data for a fragment, but they do have control over the color and depth values.</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="container pipeline-stage" id="pipe-stage9">
+                                    <h3>Per Sample Operations</h3>
+                                    <p style="line-height: 2.0em;"><strong>The fragment data output from the fragment processor is then passed through a sequence of steps.</strong><br/>
 
 The first step is a sequence of culling tests; if a test is active and the fragment fails the test, the underlying pixels/samples are not updated (usually). Many of these tests are only active if the user activates them.</p>
-                        </div>
-                    
+                                </div>
+                            </li>
+                            
+                        </ol>
                     </div>
                 </div>
 

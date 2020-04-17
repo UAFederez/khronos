@@ -11,12 +11,12 @@ py/
     [x] tmp_perfbench.html
     [x] tmp_glut.html
     [x] tmp_news.html
-    [ ] tmp_contact.html
+    [x] tmp_contact.html
 
     [x] Links, Lists, HTML layouts, etc.
     [x] Image Map
     [x] Tables
-    [ ] Forms
+    [x] Forms
     [x] Animated Images
     [x] Sliding Window / Images
     [x] Drop down (navigation bar) menu
@@ -32,6 +32,14 @@ py/
         [x] CSS Colors (rgba)
         [ ] CSS Gradients
         [x] CSS Shadow effects
+
+Contact:
+Name,
+Last Name
+Contact Info:
+    Email
+    Telephone Number
+Message
     
 OpenGL Website Pages:
 Home
