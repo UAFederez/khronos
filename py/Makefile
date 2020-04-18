@@ -5,5 +5,4 @@ PI  = python3
 
 all: $(SRC)
 	$(PI) $(SRC)
-	@#rsync -r $(DIR) $(DEST)
 

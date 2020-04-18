@@ -9,7 +9,7 @@ def read_faqs_file():
     faqsTxt = text.split('|')
 
     faqs = []
-    
+
     for faq in faqsTxt:
         faqText  = faq.split("?")
         question = faqText[0].strip('\n') + "?"
@@ -26,7 +26,7 @@ def read_pipeline_file():
     pipeLinesTxt = text.split('%')
 
     pipe = []
-    
+
     for pipeLine in pipeLinesTxt:
         pipeLineText  = pipeLine.split("$")
         question = pipeLineText[0].strip('\n')
@@ -57,14 +57,14 @@ for page in pages:
     template = Template(pageSource.read())
 
     if page == 'tmp_faq.html':
-        s = template.render(header_tmp = headerTmp, 
-                            nav_tmp    = navTmp, 
-                            footer_tmp = footerTmp, 
+        s = template.render(header_tmp = headerTmp,
+                            nav_tmp    = navTmp,
+                            footer_tmp = footerTmp,
                             questions  = faqs)
     elif page == 'tmp_pipeline.html':
-        s = template.render(header_tmp = headerTmp, 
-                            nav_tmp    = navTmp, 
-                            footer_tmp = footerTmp, 
+        s = template.render(header_tmp = headerTmp,
+                            nav_tmp    = navTmp,
+                            footer_tmp = footerTmp,
                             pipeline   = pipe)
     elif page == "tmp_glut.html":
         files   = [ img for img in os.listdir(Path.cwd() / "../img/lightbox/") if '.' in img]
@@ -75,12 +75,12 @@ for page in pages:
         files.sort()
 
         descriptions = [
-                "Open Inventor for Medicine", 
-                "Open Inventor for Engineering", 
+                "Open Inventor for Medicine",
+                "Open Inventor for Engineering",
                 "Open Inventor for Mining & Oil",
                 "Open Inventor for Cloud Computing",
-                "Open Scene Graph for Architecture", 
-                "Open Scene Graph for Transportation", 
+                "Open Scene Graph for Architecture",
+                "Open Scene Graph for Transportation",
                 "Open Scene Graph for Construction",
                 "Open Scene Graph for Flight Simulation",
                 "Quesa 3D Demo for Geometry",
@@ -92,9 +92,9 @@ for page in pages:
             # print((fileDir + img, fileDir + 'thumb/' + thumbnail))
             images.append((fileDir + img, fileDir + 'thumb/' + thumbnail))
 
-        s = template.render(header_tmp = headerTmp, 
-                            nav_tmp    = navTmp, 
-                            footer_tmp = footerTmp, 
+        s = template.render(header_tmp = headerTmp,
+                            nav_tmp    = navTmp,
+                            footer_tmp = footerTmp,
                             images     = images,
                             description = descriptions)
     else:
@@ -102,4 +102,3 @@ for page in pages:
 
     output = open(f'../{page[4:]}', 'w') # remove "tmp_" from output file name
     output.write(s)
-
